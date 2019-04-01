@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@media (max-width:896px){
+
+	/*wrapper*/
+	#wrapper{
+		width: 100vw;
+		height: 100vh;
+		margin: 0 auto;
+		position: relative;
+	}
+	#wrapperIn{
+		position: fixed;
+		top: 5vh;
+		left: 0;
+		width: 100vw;
+		height: 90vh;
+		padding-top: 2vh;
+		/*background-color: #fafafa;*/
+		/*margin: 0 auto;*/
+	}
+	#upload{
+		width: 90%;
+		margin: 0 auto;
+	}
+	form{
+		width: 100%;
+		text-align: center;
+	}
+	.imagePreview {
+	    width: 100%;
+	    height: 35vh;
+	    background-position: center center;
+	    background-size: cover;
+	    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+	    display: inline-block;
+	    border: solid 1px #000;
+	}
+	.input-group{
+		width: 100%;
+		height: 7%;
+		margin-top: 5%;
+	}
+	.input-group-btn{
+		height: 100%;
+		line-height: 100%;
+		width: 90vw;
+	}
+	.btn-primary{
+		width: 100%;
+		height: 100%;
+		line-height: 100%;
+		font-size:1.5rem;
+		padding: 5%;
+		overflow: hidden;
+	}
+	.caption{
+		width: 100%;
+		height: 15%;
+		margin-top: 10%;
+		font-size: 1.2rem;
+		border: solid 1px #000;
+		vertical-align: top;
+	}
+	.btn-success{
+		width: 70vw;
+		height: 5vh;
+		font-size: 1.5rem;
+	}
+}

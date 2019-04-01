@@ -3,11 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
         <title>github</title>
     </head>
     <body>
-        <form action="/user" method="post">
+        <div id="header">
+            <h1>instamok</h1>
+        </div>
+
+        <div id="wrapper" style="background-color:orange;height: 1000px;margin-top:5vh;">
+            <p>aaaaaa</p>
+        </div>
+
+        <div id="footer">
+            <ul style="margin:0;">
+                <li><a href="#" style="display:inline-block;">ホーム</a></li>
+                <li><a href="welcome.blade.php">ログアウト</a></li>
+                <li><a href="/home">投稿</a></li>
+            </ul>
+        </div>
+        <!-- <form action="/user" method="post">
             {{ csrf_field() }}
 
             <div>お名前 : <input type="text" name="name" value="{{$user->name}}"></div>
@@ -36,6 +52,6 @@
             <div>body : <input type="text" name="body"></div>
 
             <input type="submit" value="Confirm">
-        </form>
+        </form> -->
     </body>
 </html>

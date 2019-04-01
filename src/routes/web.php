@@ -26,8 +26,10 @@ Route::post('github/issue', 'Github\GithubController@createIssue');
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
 Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::post('user', 'User\UserController@updateUser');
+// Route::post('user', 'User\UserController@updateUser');
 
-Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 Route::post('/upload', 'HomeController@upload');
+
+Route::get('/profile', 'PostController@index');
