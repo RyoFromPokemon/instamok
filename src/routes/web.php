@@ -30,6 +30,6 @@ Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/upload', 'ProfileController@upload');
+Route::post('/upload', 'HomeController@upload');
 
 Route::get('/profile', 'ProfileController@index');

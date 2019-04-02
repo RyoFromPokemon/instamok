@@ -1,6 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/all.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/post.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 <link href="{{ asset('https://fonts.googleapis.com/css?family=Caveat') }}" rel="stylesheet">
 <link href="{{ asset('https://fonts.googleapis.com/css?family=Handlee') }}" rel="stylesheet">
@@ -37,7 +38,8 @@
                         <button class="btn btn-success" style="border-radius:0;"> Upload </button>
                 <!-- アップロードした画像。なければ表示しない -->
                 @isset ($filename)
-                <div>
+                <div class="post">
+                    <p>アップロードテスト</p>
                     <img src="{{ asset('storage/' . $filename) }}">
                 </div>
                 @endisset

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@media (max-width:896px){	
+	.post{
+		margin-top: 20%;
+		margin-bottom: 20%;
+	}
+	.post img{
+		width: 100%;
+	}
+	
+}
