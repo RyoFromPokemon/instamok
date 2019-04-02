@@ -1,9 +1,9 @@
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/all.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 <link href="{{ asset('https://fonts.googleapis.com/css?family=Caveat') }}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css?family=Handlee') }}" rel="stylesheet">
 <!-- エラーメッセージ。なければ表示しない -->
 @if ($errors->any())
 <ul>
@@ -27,10 +27,10 @@
                         <div class="imagePreview"></div>
                         <div class="input-group">
                             <label class="input-group-btn">
-                                <span class="btn btn-primary" style="border-radius:0;">画像を選択<input type="file" class="form-control uploadFile" style="display:none" name="file"></span>
+                                <span class="btn btn-primary" style="border-radius:0;">Choose img<input type="file" class="form-control uploadFile" style="display:none" name="file"></span>
                             </label><br>
                         </div>
-                        <textarea class="caption" placeholder="キャプション" maxlength="200" style="vertical-align:top";></textarea>
+                        <textarea class="caption" placeholder="Comment" maxlength="200" style="vertical-align:top";></textarea>
                         <br>
                         <hr>
                         {{ csrf_field() }}
@@ -66,13 +66,13 @@
             });
             </script>
         </div>
-    </div><!--wrapper-->
+    </div><!--wrapperIn-->
 
     <div id="footer">
         <ul style="margin:0;">
-            <li><a href="#">ホーム</a></li>
-            <li><a href="welcome.blade.php">ログアウト</a></li>
-            <li><a href="#">投稿</a></li>
+            <li><a href="/github">home</a></li>
+            <li><a href="welcome.blade.php">log out</a></li>
+            <li><a href="/profile">my page</a></li>
         </ul>
     </div>
 </div>

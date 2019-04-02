@@ -1,8 +1,3 @@
-
-
-
-
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -31,10 +26,13 @@
 					text-decoration: none;
 					color: #010101;
 				}
+				img{
+					vertical-align: bottom;
+				}
 				#wrapper{
 					width: 100vw;
 					height: 100vh;
-					background: linear-gradient(-135deg, #E4A972, #9941D8);
+					background: linear-gradient(-135deg, #9941D8, #02DEFB);
 					text-align: center; 
 				}
 				h1{
@@ -46,7 +44,7 @@
 				#concept{
 					padding-top: 5%;
 					color: #fafafa;
-					margin-bottom: 20%;
+					margin-bottom: 30%;
 				}
 				#wrapperIn{
 					display: inline-block;
@@ -77,9 +75,12 @@
 					margin-top: 5%;
 					width: 70%;
 				}
+				#wrapperIn p:nth-child(2){
+					margin-top: -3%;
+				}
 				#wrapperIn p:nth-child(3){
-					margin-top: 5%;
-					font-size: 1.3rem;
+					margin-top: 8%;
+					font-size: 1.7rem;
 				}
         	}
         </style>
@@ -88,12 +89,12 @@
     <body>
     	<div id="wrapper">
     		<h1>instamok</h1>
-    		<p id="concept">- 写真・動画から繋がる世界 -</p>
+    		<p id="concept">- installing your world by photo -</p>
     		<div id="wrapperIn">
     			<a href="/login/github">
     				<p><img src="../img/github.png"></p>
-    	    		<p>githubアカウントでログイン</p>
-    	    		<p>ここをタップ</p>
+    	    		<p>Sign In by github</p>
+    	    		<p>Tap here!</p>
     	  		</a>
     	  	</div>
         </div>

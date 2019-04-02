@@ -13,9 +13,9 @@ class GithubController extends Controller
     public function top(Request $request)
     {
         $token = $request->session()->get('github_token', null);
-
         try {
             $github_user = Socialite::driver('github')->userFromToken($token);
+            $request->session()->put('key', $github_user);
         } catch (\Exception $e) {
             return redirect('login/github');
         }
