@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@media (max-width:896px){	
+	a{
+		color: #000;
+	}
+	#wrapper{
+		width: 100vw;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+	#wrapperIn{
+		width: 100%;
+		height: 140%;
+		/*background-color: #fafafa;*/
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+	}
+	.photolist{
+		width: 90%;
+		height: 30%;
+		border: solid 1px darkgray;
+		margin: 0 auto;
+		margin-top: 10%;
+	}
+	.photolistIn{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.postphoto{
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.postphoto img{
+		width: 100%;
+	}
+
+}

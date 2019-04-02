@@ -13,7 +13,7 @@
    class ProfileController extends Controller
    {
        public function index(Request $request) {
-          $post = Posts::all(); 
+          // $post = Posts::all(); 
 
           $token = $request->session()->get('github_token', null);
         try {
@@ -61,29 +61,4 @@
            $post = Post::all(); // 全データの取り出し
            return view('profile', ["post" => $post]); // bbs.indexにデータを渡す
        }
-
-       public function upload(Request $request){
-        $this->validate($request, [
-            'file' => [
-                // 必須
-                'required',
-                // アップロードされたファイルであること
-                'file',
-                // 画像ファイルであること
-                'image',
-                // MIMEタイプを指定
-                'mimes:jpeg,png',
-            ]
-        ]);
-
-        if ($request->file('file')->isValid([])) {
-            $path = $request->file->store('public');
-            return view('home')->with('filename', basename($path));
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->withErrors();
-        }
-    }
    }

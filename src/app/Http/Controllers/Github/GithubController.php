@@ -21,8 +21,7 @@ class GithubController extends Controller
         }
 
         $client = new \GuzzleHttp\Client();
-        $res = $client->request('GET', 'https://api.github.com/user/repos', [
-            'headers' => [
+        $res = $client->request('GET', 'https://api.github.com/user/repos', ['headers' => [
                 'Authorization' => 'token ' . $token
             ]
         ]);
