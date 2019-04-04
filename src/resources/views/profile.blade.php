@@ -27,15 +27,7 @@
                 @endforeach
             </ul>
         @endif
-
-        @isset($post)
-        @foreach ($post as $p)
-            <h2>{{ $p->photo }}さんの投稿</h2>
-            {{ $p->caption }}
-            <br><hr>
-        @endforeach
-        @endisset
-
+        
         @isset ($filename)
         <div>
             <img src="{{ asset('storage/' . $filename) }}">
@@ -44,14 +36,11 @@
 
         <div id="photos">
             <ul>
-                <li><img src="/img/goku.jpg"></li>
-                <li><img src="/img/tama.jpg"></li>
-                <li><img src="/img/aofu.jpg"></li>
-                <li><img src="/img/saba.jpg"></li>
-                <li><img src="/img/mach.jpg"></li>
-                <li><img src="/img/soba.jpg"></li>
-                <li><img src="/img/goku.jpg"></li>
-                <li><img src="/img/akiy.jpg"></li>
+                @isset($post)
+                @foreach ($posts as $p)
+                    <li><img src="data:image/png;base64,<?= $p->photo ?>"></li>
+                @endforeach
+                @endisset
             </ul>
         </div>
 

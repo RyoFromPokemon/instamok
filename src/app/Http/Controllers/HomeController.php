@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Model\Posts; 
 
 class HomeController extends Controller
 {
@@ -18,7 +19,10 @@ class HomeController extends Controller
     }
 
     public function upload(Request $request)
-    {
+    {   
+        $photo = base64_encode(file_get_contents($request->photo->getRealPath()));
+        Posts::insert(["photo" => $photo, "caption" => $caption]); // データベーステーブルpostsに投稿内容を入れる
+
         $this->validate($request, [
             'file' => [
                 // 必須

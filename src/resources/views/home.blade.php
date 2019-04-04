@@ -24,11 +24,13 @@
         <div id="upload">
         <div class="container page-header" style="width:100%;border-bottom: 0;">
             <div class="col-sm-4" style="width:100%;">
-                <form action="{{ url('upload') }}" method="POST" enctype="multipart/form-data">
+                <form action="/profile" method="POST" enctype="multipart/form-data">
                         <div class="imagePreview"></div>
                         <div class="input-group">
                             <label class="input-group-btn">
-                                <span class="btn btn-primary" style="border-radius:0;">Choose img<input type="file" class="form-control uploadFile" style="display:none" name="file"></span>
+                                <span class="btn btn-primary" style="border-radius:0;">Choose img
+                                    <input type="file" class="form-control uploadFile" style="display:none" name="file">
+                                </span>
                             </label><br>
                         </div>
                         <textarea class="caption" placeholder="Comment" maxlength="200" style="vertical-align:top";></textarea>
@@ -73,8 +75,8 @@
     <div id="footer">
         <ul style="margin:0;">
             <li><a href="/github">home</a></li>
-            <li><a href="welcome.blade.php">log out</a></li>
             <li><a href="/profile">my page</a></li>
+            <li><a href="welcome.blade.php">log out</a></li>
         </ul>
     </div>
 </div>

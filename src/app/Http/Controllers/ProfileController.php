@@ -11,9 +11,26 @@
 
 
    class ProfileController extends Controller
-   {
+   {  
+       // 投稿された内容を表示するページ
+       public function create(Request $request) {
+
+           // バリデーションチェック
+           $request->validate([
+               'photo' => 'required',
+               'caption' => 'required|max:200',
+           ]);
+
+           // 投稿内容の受け取って変数に入れる
+           $photo = $request->input('photo');
+           $caption = $request->input('caption');
+
+           $posts = Post::all(); // 全データの取り出し
+           return view('profile', ["post" => $post]); // bbs.indexにデータを渡す
+       }
+
        public function index(Request $request) {
-          // $post = Posts::all(); 
+          $posts = Posts::all();
 
           $token = $request->session()->get('github_token', null);
         try {
@@ -39,26 +56,7 @@
             'repos' => array_map(function($o) {
                 return $o->name;
             }, json_decode($res->getBody()))
-        ]);
+        ],["posts" => $posts]);
        }
 
-
-       // 投稿された内容を表示するページ
-       public function create(Request $request) {
-
-           // バリデーションチェック
-           $request->validate([
-               'photo' => 'required|max:10',
-               'caption' => 'required|max:200',
-           ]);
-
-           // 投稿内容の受け取って変数に入れる
-           $post = $request->input('post');
-           $caption = $request->input('caption');
-
-           Post::insert(["photo" => $photo, "caption" => $caption]); // データベーステーブルbbsに投稿内容を入れる
-
-           $post = Post::all(); // 全データの取り出し
-           return view('profile', ["post" => $post]); // bbs.indexにデータを渡す
-       }
    }
